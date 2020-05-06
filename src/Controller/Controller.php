@@ -15,13 +15,6 @@ abstract class Controller
     protected $route_params = [];
 
     /**
-     * url of request
-     *
-     * @var string
-     */
-    public $here = '';
-
-    /**
      * Class constructor
      *
      * @param array $route_params  Parameters from the route
