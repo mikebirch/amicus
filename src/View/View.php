@@ -1,6 +1,7 @@
 <?php
 
 namespace Paulus\View;
+use Twig\Extra\Html\HtmlExtension;
 
 /**
  * View
@@ -50,6 +51,7 @@ class View
                     'cache' => $data['config']['paths']['Cache'] . DS . 'twig'
                 ]);
             }
+            $twig->addExtension(new HtmlExtension());
         }
         echo $twig->render($template, $data);
     }
