@@ -21,7 +21,11 @@ class View
     {
         extract($data, EXTR_SKIP);
 
-        $file = $config['paths']['Template'] . DS . $view;
+        if ( isset($config) ) {
+            $file = $config['paths']['Template'] . DS . $view;
+        } else {
+            throw new \Exception("config not found");
+        }
 
         if (is_readable($file)) {
             require $file;

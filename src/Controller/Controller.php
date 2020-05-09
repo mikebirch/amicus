@@ -54,7 +54,7 @@ abstract class Controller
     /**
      * Before filter - called before an action method.
      *
-     * @return void
+     * @return mixed
      */
     protected function before()
     {
@@ -63,7 +63,7 @@ abstract class Controller
     /**
      * After filter - called after an action method.
      *
-     * @return void
+     * @return mixed
      */
     protected function after()
     {

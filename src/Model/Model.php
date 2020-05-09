@@ -30,7 +30,7 @@ abstract class Model
     /**
      * Get config
      *
-     * @return void
+     * @return array
      */
     protected static function getConfig()
     {
