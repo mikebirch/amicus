@@ -1,6 +1,6 @@
 <?php
 
-namespace Paulus\View;
+namespace Amicus\View;
 use Twig\Extra\Html\HtmlExtension;
 
 /**

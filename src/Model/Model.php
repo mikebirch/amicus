@@ -1,9 +1,9 @@
 <?php
 
-namespace Paulus\Model;
+namespace Amicus\Model;
 
 use Medoo\Medoo;
-use Paulus\Configure\Configure;
+use Amicus\Configure\Configure;
 
 /**
  * Base model

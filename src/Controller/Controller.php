@@ -1,6 +1,6 @@
 <?php
 
-namespace Paulus\Controller;
+namespace Amicus\Controller;
 
 /**
  * Base controller

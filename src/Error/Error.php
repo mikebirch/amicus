@@ -1,9 +1,9 @@
 <?php
 
-namespace Paulus\Error;
+namespace Amicus\Error;
 
-use Paulus\Configure\Configure;
-use Paulus\View\View;
+use Amicus\Configure\Configure;
+use Amicus\View\View;
 
 /**
  * Error and exception handler

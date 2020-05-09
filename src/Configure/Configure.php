@@ -1,6 +1,6 @@
 <?php
 
-namespace Paulus\Configure;
+namespace Amicus\Configure;
 
 /**
  * Configure class
