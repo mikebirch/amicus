@@ -22,7 +22,10 @@
     },
     "autoload": {
         "psr-4": {
-             "Amicus\\": "/src"
+             "Amicus\\": "src/"
         }
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.12.23"
     }
 }
