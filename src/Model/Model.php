@@ -2,7 +2,7 @@
 
 namespace Amicus\Model;
 
-use Medoo\Medoo;
+use PDO;
 use Amicus\Configure\Configure;
 
 /**
@@ -16,15 +16,37 @@ abstract class Model
      *
      * @return mixed
      */
-    protected static function getDB()
+    protected static function getPDO()
     {
-        static $db = null;
-        $configure = new Configure();
-        $config = $configure->read();
+        static $pdo = null;
+        $config = self::getConfig();
         $db_config = $config['Datasources'][$config['environment']];
-        $db = new Medoo($db_config);
 
-        return $db;
+        if ($pdo === null) {
+
+            $dsn = 'mysql:host=' . 
+            $db_config['host'] . 
+            ';dbname=' . 
+            $db_config['name'] . 
+            ';charset=' . 
+            $db_config['charset'];
+            $options = [
+                PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                PDO::ATTR_EMULATE_PREPARES   => false,
+            ];
+            try {
+                $pdo = new PDO(
+                    $dsn,
+                    $db_config['username'],
+                    $db_config['password'],
+                    $options
+                );
+            } catch (\PDOException $e) {
+                throw new \PDOException($e->getMessage(), (int)$e->getCode());
+            }
+        }
+        return $pdo;
     }
 
     /**
