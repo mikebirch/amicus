@@ -1,9 +1,9 @@
 <?php
 
-namespace Amicus\Model;
+namespace Showus\Model;
 
 use PDO;
-use Amicus\Configure\Configure;
+use Showus\Configure\Configure;
 
 /**
  * Base model

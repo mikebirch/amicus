@@ -1,6 +1,6 @@
 <?php
 
-namespace Amicus\Router;
+namespace Showus\Router;
 
 /**
  * Router

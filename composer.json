@@ -1,5 +1,5 @@
 {
-    "name": "mikebirch/amicus",
+    "name": "mikebirch/showus",
 	"type": "framework",
     "description": "A lightweight PHP MVC framework",
     "keywords" : [
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-             "Amicus\\": "src/"
+             "Showus\\": "src/"
         }
     },
     "require-dev": {

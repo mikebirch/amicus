@@ -1,9 +1,9 @@
 <?php
 
-namespace Amicus\Error;
+namespace Showus\Error;
 
-use Amicus\Configure\Configure;
-use Amicus\View\View;
+use Showus\Configure\Configure;
+use Showus\View\View;
 
 /**
  * Error and exception handler

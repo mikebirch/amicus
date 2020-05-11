@@ -1,6 +1,6 @@
 <?php
 
-namespace Amicus\View;
+namespace Showus\View;
 use Twig\Extra\Html\HtmlExtension;
 
 /**

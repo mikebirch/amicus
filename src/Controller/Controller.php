@@ -1,6 +1,6 @@
 <?php
 
-namespace Amicus\Controller;
+namespace Showus\Controller;
 
 /**
  * Base controller

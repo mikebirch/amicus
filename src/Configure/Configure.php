@@ -1,6 +1,6 @@
 <?php
 
-namespace Amicus\Configure;
+namespace Showus\Configure;
 
 /**
  * Configure class
