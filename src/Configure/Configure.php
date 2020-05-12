@@ -15,7 +15,7 @@ class Configure
      *
      * @return array<mixed>|null
      */
-    public static function read(): ?array
+    public static function read()
     {
         $return = include CONFIG . DS . 'config.php';
         if (is_array($return)) {
