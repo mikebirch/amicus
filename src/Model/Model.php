@@ -19,7 +19,7 @@ abstract class Model
     protected static function getPDO()
     {
         static $pdo = null;
-        $config = self::getConfig();
+        $config = Configure::read();
         $db_config = $config['Datasources'][$config['environment']];
 
         if ($pdo === null) {
@@ -47,16 +47,5 @@ abstract class Model
             }
         }
         return $pdo;
-    }
-
-    /**
-     * Get config
-     *
-     * @return array
-     */
-    protected static function getConfig()
-    {
-        static $config = null;
-        return Configure::read();
     }
 }
