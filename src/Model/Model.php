@@ -56,7 +56,7 @@ abstract class Model
      */
     protected static function getConfig()
     {
-        $configure = new Configure();
-        return $configure->read();
+        static $config = null;
+        return Configure::read();
     }
 }
