@@ -47,12 +47,6 @@ class Error
         $configure = new Configure();
         $config = $configure->read();
 
-        if ($config['environment'] == 'dev') {
-            ini_set('display_errors', 1);
-            ini_set('display_startup_errors', 1);
-            error_reporting(E_ALL); 
-        }
-
         if ($config['debug'] === true) {
             echo "<h1>Fatal error</h1>";
             echo "<p>Uncaught exception: '" . get_class($exception) . "'</p>";
