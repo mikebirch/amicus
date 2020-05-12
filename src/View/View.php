@@ -19,9 +19,10 @@ class View
      */
     public static function render($view, $data = [])
     {
+        $config = null;
         extract($data, EXTR_SKIP);
 
-        if ( isset($config) ) {
+        if ( !empty($config) ) {
             $file = $config['paths']['Template'] . DS . $view;
         } else {
             throw new \Exception("config not found");
