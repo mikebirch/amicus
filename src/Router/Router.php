@@ -10,13 +10,13 @@ class Router
 
     /**
      * Associative array of routes (the routing table)
-     * @var array
+     * @var array<string,array>
      */
     protected $routes = [];
 
     /**
      * Parameters from the matched route
-     * @var array
+     * @var array<string,string>
      */
     protected $params = [];
 
@@ -24,7 +24,7 @@ class Router
      * Add a route to the routing table
      *
      * @param string $route  The route URL
-     * @param array  $params Parameters (controller, action, etc.)
+     * @param array<string,string> $params Parameters (controller, action, etc.)
      *
      * @return void
      */
@@ -48,7 +48,7 @@ class Router
     /**
      * Get all the routes from the routing table
      *
-     * @return array
+     * @return array<string,array>
      */
     public function getRoutes()
     {
@@ -85,7 +85,7 @@ class Router
     /**
      * Get the currently matched parameters
      *
-     * @return array
+     * @return array<string,string>
      */
     public function getParams()
     {

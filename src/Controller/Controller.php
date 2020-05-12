@@ -10,14 +10,14 @@ abstract class Controller
 
     /**
      * Parameters from the matched route
-     * @var array
+     * @var array<string,string>
      */
     protected $route_params = [];
 
     /**
      * Class constructor
      *
-     * @param array $route_params  Parameters from the route
+     * @param array<string,string> $route_params  Parameters from the route
      *
      * @return void
      */
@@ -33,11 +33,11 @@ abstract class Controller
      * with an "Action" suffix, e.g. indexAction, showAction etc.
      *
      * @param string $name  Method name
-     * @param array $args Arguments passed to the method
+     * @param array<mixed> $args Arguments passed to the method
      *
      * @return void
      */
-    public function __call($name, $args)
+    public function __call(string $name, array $args)
     {
         $method = $name . 'Action';
 

@@ -10,7 +10,12 @@ namespace Showus\Configure;
  */
 class Configure
 {
-    public static function read()
+    /**
+     * Read the config file which is an array
+     *
+     * @return array<mixed>|null
+     */
+    public static function read(): ?array
     {
         $return = include CONFIG . DS . 'config.php';
         if (is_array($return)) {
