@@ -33,7 +33,7 @@ class Router
         // Convert the route to a regular expression: escape forward slashes
         $route = preg_replace('/\//', '\\/', $route);
 
-        // Convert variables e.g. {controller}
+        // Convert variables e.g. {slug}
         $route = preg_replace('/\{([a-z]+)\}/', '(?P<\1>[-0-9a-z]+)', $route);
 
         // Convert variables with custom regular expressions e.g. {id:\d+}
