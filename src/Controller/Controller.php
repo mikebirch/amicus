@@ -43,7 +43,10 @@ abstract class Controller
 
         if (method_exists($this, $method)) {
             if ($this->before() !== false) {
-                call_user_func_array([$this, $method], $args);
+                $callback = [$this, $method];
+                if (is_callable($callback)) {
+                    call_user_func_array($callback, $args);
+                }
                 $this->after();
             }
         } else {

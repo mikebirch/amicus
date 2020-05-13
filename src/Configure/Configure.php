@@ -13,7 +13,7 @@ class Configure
     /**
      * Read the config file which is an array
      *
-     * @return array<mixed>|null
+     * @return array<mixed>
      */
     public static function read()
     {
