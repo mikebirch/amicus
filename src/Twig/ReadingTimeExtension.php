@@ -9,11 +9,6 @@ use Twig\TwigFilter;
  */
 class ReadingTimeExtension extends AbstractExtension
 {
-    /**
-     * get filters
-     *
-     * @return void
-     */
     public function getFilters()
     {
         return [

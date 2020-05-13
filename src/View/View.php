@@ -2,7 +2,7 @@
 
 namespace Showus\View;
 use Twig\Extra\Html\HtmlExtension;
-use Showus\Twig\AppReadingTimeExtension;
+use Showus\Twig\ReadingTimeExtension;
 
 /**
  * View
@@ -57,7 +57,7 @@ class View
                 ]);
             }
             $twig->addExtension(new HtmlExtension());
-            $twig->addExtension(new AppReadingTimeExtension());
+            $twig->addExtension(new ReadingTimeExtension());
         }
         echo $twig->render($template, $data);
     }
