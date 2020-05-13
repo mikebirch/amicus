@@ -12,5 +12,5 @@ define("APP", ROOT . DS . 'src');
 
 require ROOT. DS . 'vendor' . DS . 'autoload.php';
 
-set_error_handler('Showus\Error\Error::errorHandler');
-set_exception_handler('Showus\Error\Error::exceptionHandler');
+set_error_handler('Anticus\Error\Error::errorHandler');
+set_exception_handler('Anticus\Error\Error::exceptionHandler');

@@ -1,7 +1,7 @@
 {
-    "name": "mikebirch/showus",
+    "name": "mikebirch/anticus",
 	"type": "framework",
-    "description": "A lightweight PHP MVC framework",
+    "description": "A lightweight PHP MVC framework for simple websites",
     "keywords" : [
 		"PHP",
 		"MVC",
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-             "Showus\\": "src/"
+             "Anticus\\": "src/"
         }
     },
     "require-dev": {

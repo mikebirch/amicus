@@ -1,9 +1,9 @@
 <?php
 
-namespace Showus\Model;
+namespace Anticus\Model;
 
 use PDO;
-use Showus\Configure\Configure;
+use Anticus\Configure\Configure;
 
 /**
  * Base model

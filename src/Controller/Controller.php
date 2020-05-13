@@ -1,6 +1,6 @@
 <?php
 
-namespace Showus\Controller;
+namespace Anticus\Controller;
 
 /**
  * Base controller

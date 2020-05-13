@@ -1,8 +1,8 @@
 <?php
 
-namespace Showus\View;
+namespace Anticus\View;
 use Twig\Extra\Html\HtmlExtension;
-use Showus\Twig\ReadingTimeExtension;
+use Anticus\Twig\ReadingTimeExtension;
 
 /**
  * View

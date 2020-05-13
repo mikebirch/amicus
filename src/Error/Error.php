@@ -1,9 +1,9 @@
 <?php
 
-namespace Showus\Error;
+namespace Anticus\Error;
 
-use Showus\Configure\Configure;
-use Showus\View\View;
+use Anticus\Configure\Configure;
+use Anticus\View\View;
 use Exception;
 
 /**
