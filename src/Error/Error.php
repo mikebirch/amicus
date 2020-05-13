@@ -4,6 +4,7 @@ namespace Showus\Error;
 
 use Showus\Configure\Configure;
 use Showus\View\View;
+use Exception;
 
 /**
  * Error and exception handler
