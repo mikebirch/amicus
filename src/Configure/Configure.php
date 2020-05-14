@@ -21,7 +21,9 @@ class Configure
         if (is_array($return)) {
             return $return;
         } else {
-            throw new \Exception(CONFIG . DS . 'config.php not found');
+            $message = 'The config file ' . CONFIG . DS . 'config.php was not read. ';
+            $message .= 'Either the content of the file is not an array, or this file does not exist.';
+            throw new \Exception($message);
         }
     }
 }
