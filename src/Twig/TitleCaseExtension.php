@@ -19,6 +19,12 @@ class TitleCaseExtension extends AbstractExtension
         );
     }
 
+    /**
+     * Use ucwords() to convert the string to title case
+     *
+     * @param string $title
+     * @return string
+     */
     public function titleCase($title)
     {
         return ucwords($title);
