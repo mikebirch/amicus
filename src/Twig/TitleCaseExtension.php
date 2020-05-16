@@ -15,7 +15,7 @@ class TitleCaseExtension extends AbstractExtension
     public function getFilters()
     {
         return array(
-            new TwigFilter('title', [$this, 'titleCase'])
+            new TwigFilter('titlecase', [$this, 'titleCase'])
         );
     }
 
