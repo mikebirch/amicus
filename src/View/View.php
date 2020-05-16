@@ -55,6 +55,7 @@ class View
             }
             $twig->addExtension(new HtmlExtension());
             $twig->addExtension(new ReadingTimeExtension());
+            $twig->addExtension(new TitleCaseExtension());
         }
         echo $twig->render($template, $data);
     }
