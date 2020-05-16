@@ -3,6 +3,7 @@
 namespace Anticus\View;
 use Twig\Extra\Html\HtmlExtension;
 use Anticus\Twig\ReadingTimeExtension;
+use Anticus\Twig\TitleCaseExtension;
 
 /**
  * View
