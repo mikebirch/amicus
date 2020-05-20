@@ -49,6 +49,7 @@ class View
             $loader = new \Twig\Loader\FilesystemLoader($data['config']['paths']['Template']);
             if ($data['config']['debug'] === true) {
                 $twig = new \Twig\Environment($loader, ['debug' => true]);
+                $twig->addExtension(new \Twig\Extension\DebugExtension());
             } else {
                 $twig = new \Twig\Environment($loader, [
                     'cache' => $data['config']['paths']['Cache'] . DS . 'twig'
