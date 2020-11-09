@@ -55,17 +55,21 @@ class Error
             echo "<p>Stack trace:<pre>" . $exception->getTraceAsString() . "</pre></p>";
             echo "<p>Thrown in '" . $exception->getFile() . "' on line " . $exception->getLine() . "</p>";
         } else {
-            $log = $config['paths']['Log'] . DS . date('Y-m-d') . '.txt';
-            ini_set('error_log', $log);
+            $logs = $config['paths']['Logs'] . DS . date('Y-m-d') . '.txt';
+            ini_set('error_log', $logs);
 
             $message = "Uncaught exception: '" . get_class($exception) . "'";
             $message .= " with message '" . $exception->getMessage() . "'";
             $message .= "\nStack trace: " . $exception->getTraceAsString();
             $message .= "\nThrown in '" . $exception->getFile() . "' on line " . $exception->getLine();
 
+            // log error
             error_log($message);
 
-            View::renderTemplate("$code.html");
+            // show error page
+            $data['config'] = $config;
+            $data['here'] = $_SERVER['REQUEST_URI'];
+            View::renderTemplate("$code.html", $data);
         }
     }
 }
