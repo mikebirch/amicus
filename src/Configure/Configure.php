@@ -17,12 +17,21 @@ class Configure
      */
     public static function read()
     {
-        $return = include CONFIG . DS . 'config.php';
-        if (is_array($return)) {
-            return $return;
+        if (file_exists(CONFIG . DS . 'config.php')) {
+            $config = include CONFIG . DS . 'config.php';
+            $local_config = file_exists(CONFIG . DS . 'config_local.php');
+            if ($local_config) {
+                require CONFIG . DS . 'config_local.php';
+            }
+        }
+        if (is_array($config)) {
+            return $config;
         } else {
-            $message = 'The config file ' . CONFIG . DS . 'config.php was not read. ';
-            $message .= 'Either the content of the file is not an array, or this file does not exist.';
+            $message = 'The config file ' . CONFIG . DS . 'config.php ';
+            if ($local_config) {
+                $message .= 'or the file ' . CONFIG . DS . 'config_local.php ';
+            }
+            $message .= 'could not be read.';
             throw new \Exception($message);
         }
     }
