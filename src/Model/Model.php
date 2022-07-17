@@ -20,7 +20,7 @@ abstract class Model
     {
         static $pdo = null;
         $config = Configure::read();
-        $db_config = $config['Datasources'][$config['environment']];
+        $db_config = $config['database'];
 
         if ($pdo === null) {
 
@@ -58,7 +58,7 @@ abstract class Model
     {
         static $pdo = null;
         $config = Configure::read();
-        $db_config = $config['Datasources'][$config['environment']];
+        $db_config = $config['database'];
         if ($pdo === null) {
             $dsn = 'mysql:host=' . 
             $db_config['host'] . 
