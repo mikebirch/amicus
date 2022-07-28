@@ -17,6 +17,8 @@ class Configure
      */
     public static function read()
     {
+        $config = '';
+        $local_config = '';
         if (file_exists(CONFIG . DS . 'config.php')) {
             $config = include CONFIG . DS . 'config.php';
             $local_config = file_exists(CONFIG . DS . 'config_local.php');
