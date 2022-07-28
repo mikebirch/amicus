@@ -5,4 +5,4 @@
 
 A Lightweight PHP MVC framework based on [php-mvc](https://github.com/daveh/php-mvc) by Dave Hollingworth.
 
-See this in action in the [website skeleton]https://github.com/mikebirch/anticus-app 
+See this in action in the [website skeleton](https://github.com/mikebirch/anticus-app) 
