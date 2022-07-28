@@ -123,7 +123,7 @@ class Router
                 throw new \Exception("Controller class $controller not found");
             }
         } else {
-            throw new \Exception('No route matched for ' . $url, 404);
+            throw new \Exception('Page not found: /' . $url, 404);
         }
     }
 
