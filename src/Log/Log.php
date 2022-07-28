@@ -4,14 +4,22 @@ namespace Anticus\Log;
 
 use Anticus\Configure\Configure;
 use Anticus\View\View;
+use Whoops\Run;
 
 /**
- * Error and exception handler
+ * Logging class
  */
 class Log
 {
 
-    public static function logException($exception, $whoops)
+    /**
+     * Logs exceptions, used in a Whoops CallbackHandler
+     * 
+     * @param mixed $exception
+     * @param Run $whoops instance of Whoops\Run
+     * @return void
+     */
+    public static function logException(mixed $exception, Run $whoops)
     {
         $config = Configure::read();
         $code = $exception->getCode();
@@ -30,12 +38,9 @@ class Log
 
         // log error
         error_log($message);
-        \Whoops\Handler\Handler::DONE;
-        
         
         $data['config'] = $config;
         $data['here'] = $_SERVER['REQUEST_URI'];
         View::renderTemplate("$code.html", $data);
-    }
-    
+    } 
 }
